@@ -1,0 +1,23 @@
+TAREFA
+
+1. 🐾 Clínica veterinária — VetCare
+
+Objetivo: criar um site institucional para uma clínica veterinária.
+
+Fluxo:
+
+Home → Serviços → Detalhes do serviço → Veterinários → Perfil do veterinário → Contato/Agendamento
+
+As telas podem conter:
+
+Home;
+Sobre a clínica;
+Serviços;
+Detalhes de serviço;
+Veterinários;
+Perfil do veterinário;
+Estrutura da clínica;
+Contato;
+Agendamento visual.
+
+O agendamento não precisa funcionar. É apenas uma página/interface.
