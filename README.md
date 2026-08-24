@@ -43,21 +43,8 @@ Wireframe não pode ter preocupação estética.
 
 A ideia é representar:
 
-┌──────────────────────────────┐
-│ LOGO              MENU       │
-├──────────────────────────────┤
-│                              │
-│        TÍTULO                │
-│                              │
-│      [ IMAGEM ]              │
-│                              │
-│   Texto explicativo          │
-│                              │
-│        [ BOTÃO ]             │
-│                              │
-├──────────────────────────────┤
-│ FOOTER                       │
-└──────────────────────────────┘
+<img width="245" height="308" alt="image" src="https://github.com/user-attachments/assets/a4c0c9fc-d64f-448c-b26e-679f16b909b6" />
+
 
 E todas as telas precisam estar identificadas:
 
