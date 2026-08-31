@@ -1,0 +1,90 @@
+/* =======================================================
+   ESTILOS DO INDEX 
+   ======================================================= */
+
+@import url(style.css);
+
+/* =======================================================
+   HERO 
+   ======================================================= */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--primary);
+    padding: 20px 16px;
+    gap: 8px;
+    border-radius: 8px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-hero {
+    width: 82px;
+    height: 82px;
+}
+
+.button-hero {
+    width: 200px;
+}
+
+.hero p {
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* =========================================
+   TABLETS 
+   ========================================= */
+
+@media (min-width: 768px) {
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+    }
+
+    .logo-hero {
+        width: 180px;
+    }
+
+    .hero p {
+        max-width: 500px;
+    }
+}
+
+/* =========================================
+   DESKTOP 
+   ========================================= */
+@media (min-width: 1024px) {
+
+    .hero {
+        display: flex;
+        flex-direction: row;
+        padding: 40px 60px;
+        justify-content: center;
+        gap: 10vh;
+    }
+
+    .logo-hero {
+        width: 288px;
+        height: 288px;
+    }
+
+    .hero-content {
+        gap: 30px;
+    }
+
+    .hero p,
+    .hero h1 {
+        max-width: 700px;
+    }
+}
