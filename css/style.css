@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    /* Variáveis de Cor */
+    --primary: #FFBBC1;
+    --secondary: #6DB5D8;
+    --accents: #FF914D;
+    --accents-blue: #78B0B2;
+    --neutral-blue: #1B3A48;
+    --neutral-white: #E6E6E6;
+    --placeholder: #9F9F9F;
+
+    /* Variáveis de Fonte */
+    --fonte: "Quicksand", sans-serif;
+    --peso-leve: 300;
+    --peso-normal: 400;
+    --peso-negrito: 700;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  font-weight: var(--peso-normal); 
+}
+
+h1, h2, h3 {
+  font-weight: var(--peso-negrito);
+}
+
+.subtitulo {
+  font-weight: var(--peso-leve);
+}
