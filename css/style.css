@@ -1,3 +1,8 @@
+/* =======================================================
+   ESTILOS GERAIS E ELEMENTOS COMUNS A TODAS AS PÁGINAS 
+   ======================================================= */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 :root {
@@ -34,7 +39,9 @@ h3 {
     font-weight: var(--peso-leve);
 }
 
-/* NAVBAR */
+/* =========================================
+   NAVBAR 
+   ========================================= */
 
 .navbar {
     display: flex;
@@ -43,14 +50,6 @@ h3 {
     background-color: var(--primary);
     padding: 10px 20px;
     position: relative;
-}
-
-.menu a {
-    color: var(--neutral-blue);
-    text-decoration: none;
-    background-color: var(--neutral-white);
-    margin-top: 6px;
-    font-weight: var(--peso-negrito);
 }
 
 .menu-checkbox,
@@ -87,13 +86,8 @@ h3 {
     background: var(--neutral-blue);
 }
 
-.hamburguer-linha::before {
-    top: -8px;
-}
-
-.hamburguer-linha::after {
-    top: 8px;
-}
+.hamburguer-linha::before { top: -8px; }
+.hamburguer-linha::after { top: 8px; }
 
 /* Menu oculto que desce em coluna no mobile */
 .menu {
@@ -108,16 +102,22 @@ h3 {
     z-index: 10;
 }
 
+/* Regras unificadas em um único seletor para os links */
 .menu li a {
     display: block;
     padding: 15px 20px;
+    margin-top: 6px;
+    color: var(--neutral-blue);
+    background-color: var(--neutral-white);
+    text-decoration: none;
+    font-weight: var(--peso-negrito);
 }
 
 .menu li:last-child a {
     border-radius: 0 0 8px 8px;
 }
 
-.menu-checkbox:checked~.menu {
+.menu-checkbox:checked ~ .menu {
     display: block;
 }
 
@@ -132,24 +132,35 @@ h3 {
     z-index: 5;
 }
 
-/* Exibe o fundo escuro quando o menu é aberto */
-.menu-checkbox:checked~.overlay {
+.menu-checkbox:checked ~ .overlay {
     display: block;
 }
 
-/* RESPONSIVIDADE DESKTOP */
+/* =========================================
+   TABLETS 
+   ========================================= */
 
 @media (min-width: 768px) {
+    .menu-icon,
+    .overlay,
+    .menu-checkbox:checked ~ .overlay {
+        display: none !important;
+    }
+
+    .navbar {
+        gap: 16px;
+    }
 
     .logo {
-        width: 75px;
-        height: 75px;
+        width: 60px;
+        height: 60px;
     }
 
     .logo-container {
         display: flex;
         flex-direction: row;
-        margin-left: 120px;
+        align-items: center;
+        margin-left: 40px; 
         gap: 10px;
     }
 
@@ -159,31 +170,27 @@ h3 {
         color: var(--neutral-blue);
     }
 
-    .menu-icon {
-        display: none;
-    }
-
     .menu {
         display: flex;
         position: static;
         width: auto;
         background-color: transparent;
-        margin-right: 120px;
+        margin-right: 40px; 
+        gap: 16px;
     }
 
-    .menu a {
-        color: var(--neutral-blue);
+    .menu li a {
         background-color: var(--primary);
-        margin: 20px;
         border: 1px solid var(--neutral-white);
         font-weight: var(--peso-normal);
         border-radius: 8px;
         transition: all 0.3s ease;
-        width: 50%;
+        margin: 0;
+        padding: 8px 16px; 
         text-align: center;
     }
 
-    .menu a:hover {
+    .menu li a:hover {
         border: 1px solid var(--neutral-blue);
         color: var(--neutral-white);
     }
@@ -192,9 +199,32 @@ h3 {
         border-radius: 8px;
     }
 
-    /* Garante que o menu fique visível independente do estado do checkbox */
-    .menu-checkbox:checked~.menu,
-    .menu-checkbox:not(:checked)~.menu {
+    .menu-checkbox:checked ~ .menu,
+    .menu-checkbox:not(:checked) ~ .menu {
         display: flex;
+    }
+}
+
+/* =========================================
+   DESKTOP 
+   ========================================= */
+
+@media (min-width: 1024px) {
+    .logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    .logo-container {
+        margin-left: 120px;
+    }
+
+    .menu {
+        margin-right: 120px;
+        gap: 25px;
+    }
+    
+    .menu li a {
+        padding: 10px 20px;
     }
 }
