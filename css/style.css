@@ -18,14 +18,183 @@
 }
 
 body {
-  font-family: var(--fonte-principal);
-  font-weight: var(--peso-normal); 
+    font-family: var(--fonte);
+    font-weight: var(--peso-normal);
+    margin: 0;
+    padding: 0;
 }
 
-h1, h2, h3 {
-  font-weight: var(--peso-negrito);
+h1,
+h2,
+h3 {
+    font-weight: var(--peso-negrito);
 }
 
 .subtitulo {
-  font-weight: var(--peso-leve);
+    font-weight: var(--peso-leve);
+}
+
+/* NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    padding: 10px 20px;
+    position: relative;
+}
+
+.menu a {
+    color: var(--neutral-blue);
+    text-decoration: none;
+    background-color: var(--neutral-white);
+    margin-top: 6px;
+    font-weight: var(--peso-negrito);
+}
+
+.menu-checkbox,
+#texto-logo {
+    display: none;
+}
+
+.menu-icon {
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+}
+
+.hamburguer-linha {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--neutral-blue);
+    position: relative;
+}
+
+.hamburguer-linha::before,
+.hamburguer-linha::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--neutral-blue);
+}
+
+.hamburguer-linha::before {
+    top: -8px;
+}
+
+.hamburguer-linha::after {
+    top: 8px;
+}
+
+/* Menu oculto que desce em coluna no mobile */
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 50%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+}
+
+.menu li:last-child a {
+    border-radius: 0 0 8px 8px;
+}
+
+.menu-checkbox:checked~.menu {
+    display: block;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1b3a4899;
+    z-index: 5;
+}
+
+/* Exibe o fundo escuro quando o menu é aberto */
+.menu-checkbox:checked~.overlay {
+    display: block;
+}
+
+/* RESPONSIVIDADE DESKTOP */
+
+@media (min-width: 768px) {
+
+    .logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    .logo-container {
+        display: flex;
+        flex-direction: row;
+        margin-left: 120px;
+        gap: 10px;
+    }
+
+    #texto-logo {
+        display: flex;
+        font-weight: var(--peso-negrito);
+        color: var(--neutral-blue);
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        margin-right: 120px;
+    }
+
+    .menu a {
+        color: var(--neutral-blue);
+        background-color: var(--primary);
+        margin: 20px;
+        border: 1px solid var(--neutral-white);
+        font-weight: var(--peso-normal);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        width: 50%;
+        text-align: center;
+    }
+
+    .menu a:hover {
+        border: 1px solid var(--neutral-blue);
+        color: var(--neutral-white);
+    }
+
+    .menu li:last-child a {
+        border-radius: 8px;
+    }
+
+    /* Garante que o menu fique visível independente do estado do checkbox */
+    .menu-checkbox:checked~.menu,
+    .menu-checkbox:not(:checked)~.menu {
+        display: flex;
+    }
 }
