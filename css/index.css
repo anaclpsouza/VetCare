@@ -159,4 +159,35 @@
         width: 140px;
         height: 140px;
     }
+
+    .button-servicos {
+        width: 400px;
+        height: 24px;
+        text-align: center;
+        align-content: center;
+        font-size: 16px;
+    }
+
+    .linha-com-botao {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    .linha-com-botao::before,
+    .linha-com-botao::after {
+        content: "";
+        flex: 1;
+        border-bottom: 2px solid var(--neutral-blue);
+    }
+
+    .linha-com-botao::before {
+        margin-right: 20px;
+    }
+
+    .linha-com-botao::after {
+        margin-left: 20px;
+    }
 }

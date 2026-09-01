@@ -51,15 +51,28 @@ main {
     ESTILO DOS BOTÕES 
    ========================================= */
 
-.button-accents {
-    background-color: var(--accents);
-    color: var(--neutral-white);
+.button {
     font-weight: var(--peso-negrito);
     padding: 8px;
     border-radius: 8px;
     text-decoration: none;
     width: auto;
     transition: all 0.3 ease;
+}
+
+.button-default {
+    color: var(--neutral-blue);
+    background-color: var(--neutral-white);
+}
+
+.button-default:hover {
+    background-color: var(--neutral-blue);
+    color: var(--neutral-white);
+}
+
+.button-accents {
+    background-color: var(--accents);
+    color: var(--neutral-white);
 }
 
 .button-accents:hover {
