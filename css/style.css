@@ -22,6 +22,12 @@
     --peso-negrito: 700;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--fonte);
     font-weight: var(--peso-normal);
@@ -57,7 +63,7 @@ main {
     border-radius: 8px;
     text-decoration: none;
     width: auto;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
 }
 
 .button-default {
@@ -89,7 +95,7 @@ main {
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary);
-    padding: 10px 20px;
+    padding: 10px 16px;
     position: relative;
 }
 
@@ -196,6 +202,10 @@ main {
         font-size: 48px;
     }
 
+    h2 {
+        font-size: 32px;
+    }
+
     .menu-icon,
     .overlay,
     .menu-checkbox:checked~.overlay {
@@ -203,6 +213,7 @@ main {
     }
 
     .navbar {
+        padding: 15px 40px;
         gap: 16px;
     }
 
@@ -215,7 +226,7 @@ main {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-left: 40px;
+        margin-left: 0;
         gap: 10px;
     }
 
@@ -230,7 +241,7 @@ main {
         position: static;
         width: auto;
         background-color: transparent;
-        margin-right: 40px;
+        margin-right: 0;
         gap: 16px;
     }
 
@@ -254,10 +265,7 @@ main {
         border-radius: 8px;
     }
 
-    .menu-checkbox:checked~.menu,
-    .menu-checkbox:not(:checked)~.menu {
-        display: flex;
-    }
+    
 }
 
 /* =========================================
@@ -265,8 +273,13 @@ main {
    ========================================= */
 
 @media (min-width: 1024px) {
+
     main {
         margin: 45px 120px;
+    }
+
+    .navbar {
+        padding: 20px 100px;
     }
 
     .logo {
@@ -274,12 +287,7 @@ main {
         height: 75px;
     }
 
-    .logo-container {
-        margin-left: 120px;
-    }
-
     .menu {
-        margin-right: 120px;
         gap: 25px;
     }
 
