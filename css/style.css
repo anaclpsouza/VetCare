@@ -22,6 +22,12 @@
     --peso-negrito: 700;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--fonte);
     font-weight: var(--peso-normal);
@@ -35,8 +41,49 @@ h3 {
     font-weight: var(--peso-negrito);
 }
 
+h1 {
+    font-size: 32px;
+}
+
 .subtitulo {
     font-weight: var(--peso-leve);
+}
+
+main {
+    margin: 20px 16px;
+}
+
+/* =========================================
+    ESTILO DOS BOTÕES 
+   ========================================= */
+
+.button {
+    font-weight: var(--peso-negrito);
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.button-default {
+    color: var(--neutral-blue);
+    background-color: var(--neutral-white);
+}
+
+.button-default:hover {
+    background-color: var(--neutral-blue);
+    color: var(--neutral-white);
+}
+
+.button-accents {
+    background-color: var(--accents);
+    color: var(--neutral-white);
+}
+
+.button-accents:hover {
+    background-color: var(--neutral-white);
+    color: var(--neutral-blue);
 }
 
 /* =========================================
@@ -48,7 +95,7 @@ h3 {
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary);
-    padding: 10px 20px;
+    padding: 10px 16px;
     position: relative;
 }
 
@@ -86,8 +133,13 @@ h3 {
     background: var(--neutral-blue);
 }
 
-.hamburguer-linha::before { top: -8px; }
-.hamburguer-linha::after { top: 8px; }
+.hamburguer-linha::before {
+    top: -8px;
+}
+
+.hamburguer-linha::after {
+    top: 8px;
+}
 
 /* Menu oculto que desce em coluna no mobile */
 .menu {
@@ -117,7 +169,7 @@ h3 {
     border-radius: 0 0 8px 8px;
 }
 
-.menu-checkbox:checked ~ .menu {
+.menu-checkbox:checked~.menu {
     display: block;
 }
 
@@ -132,22 +184,152 @@ h3 {
     z-index: 5;
 }
 
-.menu-checkbox:checked ~ .overlay {
+.menu-checkbox:checked~.overlay {
     display: block;
 }
+
+/* =========================================
+   FOOTER 
+   ========================================= */
+
+footer {
+    background-color: var(--primary);
+    padding: 28px 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.logo-midia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-footer {
+    width: 44px;
+    height: 44px;
+}
+
+.redes-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.redes-footer p {
+    font-size: 11px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--neutral-blue);
+}
+
+.footer-title {
+    font-size: 14px;
+    font-weight: var(--peso-negrito);
+    color: var(--neutral-blue);
+    margin: 0;
+}
+
+/* Coluna Navegação */
+.navegacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.navegacao-footer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.navegacao-footer li a {
+    text-decoration: none;
+    font-size: 11px;
+    line-height: 1.3;
+    color: var(--neutral-blue);
+    transition: opacity 0.2s ease;
+}
+
+.navegacao-footer li a:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+/* Coluna Fale Conosco */
+.sac {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 140px;
+}
+
+.sac-footer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.sac-footer li {
+    font-size: 11px;
+    color: var(--neutral-blue);
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    line-height: 1.3;
+}
+
+.sac-footer li i {
+    font-size: 11px;
+    margin-top: 2px;
+    color: var(--accents);
+}
+
+
 
 /* =========================================
    TABLETS 
    ========================================= */
 
 @media (min-width: 768px) {
+
+    main {
+        margin: 30px 40px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
     .menu-icon,
     .overlay,
-    .menu-checkbox:checked ~ .overlay {
+    .menu-checkbox:checked~.overlay {
         display: none !important;
     }
 
     .navbar {
+        padding: 15px 40px;
         gap: 16px;
     }
 
@@ -160,7 +342,7 @@ h3 {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-left: 40px; 
+        margin-left: 0;
         gap: 10px;
     }
 
@@ -175,7 +357,7 @@ h3 {
         position: static;
         width: auto;
         background-color: transparent;
-        margin-right: 40px; 
+        margin-right: 0;
         gap: 16px;
     }
 
@@ -186,7 +368,7 @@ h3 {
         border-radius: 8px;
         transition: all 0.3s ease;
         margin: 0;
-        padding: 8px 16px; 
+        padding: 8px 16px;
         text-align: center;
     }
 
@@ -199,9 +381,29 @@ h3 {
         border-radius: 8px;
     }
 
-    .menu-checkbox:checked ~ .menu,
-    .menu-checkbox:not(:checked) ~ .menu {
-        display: flex;
+    footer {
+        padding: 35px 60px;
+        justify-content: space-around;
+        gap: 30px;
+    }
+
+    .logo-footer {
+        width: 56px;
+        height: 56px;
+    }
+
+    .footer-title {
+        font-size: 16px;
+    }
+
+    .redes-footer p,
+    .navegacao-footer li a,
+    .sac-footer li {
+        font-size: 13px;
+    }
+
+    .sac {
+        max-width: 220px;
     }
 }
 
@@ -210,21 +412,51 @@ h3 {
    ========================================= */
 
 @media (min-width: 1024px) {
+
+    main {
+        margin: 45px 120px;
+    }
+
+    .navbar {
+        padding: 20px 100px;
+        height: 100px;
+    }
+
     .logo {
         width: 75px;
         height: 75px;
     }
 
-    .logo-container {
-        margin-left: 120px;
-    }
-
     .menu {
-        margin-right: 120px;
         gap: 25px;
     }
-    
+
     .menu li a {
         padding: 10px 20px;
+    }
+
+    footer {
+        padding: 40px 140px;
+        justify-content: space-around;
+        gap: 40px;
+    }
+
+    .logo-footer {
+        width: 64px;
+        height: 64px;
+    }
+
+    .footer-title {
+        font-size: 18px;
+    }
+
+    .redes-footer p,
+    .navegacao-footer li a,
+    .sac-footer li {
+        font-size: 14px;
+    }
+
+    .sac {
+        max-width: 260px;
     }
 }
