@@ -1,0 +1,320 @@
+/* =======================================================
+   PÁGINA SOBRE NÓS
+   ======================================================= */
+
+h1 {
+    color: var(--neutral-blue);
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 24px;
+}   
+
+/* Container dos Cards */
+.sobre-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    background-color: var(--neutral-white);
+    border-radius: 16px;
+    padding: 24px 20px;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.12), 0 6px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.16), 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: var(--peso-negrito);
+    margin: 0;
+}
+
+.card-icon {
+    width: 42px;
+    height: auto;
+}
+
+.card p {
+    font-size: 13px;
+    font-weight: var(--peso-negrito);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =======================================================
+   CORES DOS CARDS 
+   ======================================================= */
+
+.card-historia .card-title {
+    color: var(--accents);
+}
+
+.card-historia p {
+    color: var(--accents-blue);
+}
+
+.card-missao .card-title {
+    color: var(--neutral-blue);
+}
+
+.card-missao p {
+    color: var(--accents);
+}
+
+.card-valores .card-title {
+    color: var(--neutral-blue);
+}
+
+.card-valores p {
+    color: var(--accents-blue);
+}
+
+/* =======================================================
+   SEÇÃO DE CTAS
+   ======================================================= */
+
+.sobre-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.cta-card {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    border-radius: 8px;
+    padding: 0 16px 20px 16px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+.cta-estrutura {
+    background-color: var(--primary);
+}
+
+.cta-veterinarios {
+    background-color: var(--secondary);
+}
+
+.gato-img {
+    position: absolute;
+    left: -16px; 
+    top: -90px;
+    width: 140px;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    background-color: var(--neutral-white);
+    border-radius: 8px;
+    padding: 20px 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    margin-top: -30px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.cta-content p {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--neutral-blue);
+    font-weight: var(--peso-normal);
+    margin: 0;
+}
+
+/* Botões dos CTAs */
+.cta-btn {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: var(--peso-negrito);
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn-estrutura {
+    background-color: var(--neutral-blue);
+    color: var(--neutral-white);
+}
+
+.btn-estrutura:hover {
+    background-color: var(--neutral-white);
+    color: var(--neutral-blue);
+}
+
+.btn-veterinarios {
+    background-color: var(--primary);
+    color: var(--neutral-blue);
+}
+
+.btn-veterinarios:hover {
+    background-color: var(--neutral-white);
+    color: var(--neutral-blue);
+}
+
+/* =======================================================
+   RESPONSIVIDADE: TABLETS 
+   ======================================================= */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 36px;
+        margin-bottom: 32px;
+    }
+
+    .sobre-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        align-items: stretch;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .card {
+        max-width: none;
+        padding: 24px 16px;
+    }
+
+    .card-title {
+        font-size: 24px;
+    }
+
+    .card-icon {
+        width: 44px;
+    }
+
+    .card p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .sobre-cta {
+        gap: 60px;
+        max-width: 960px;
+        margin: 70px auto 0 auto;
+    }
+
+    .cta-card {
+        max-width: 960px;
+        padding: 0 32px 24px 32px;
+    }
+
+    .gato-img {
+        left: -40px; 
+        top: -165px;
+        width: 210px;
+    }
+
+    .cta-content {
+        max-width: 680px;
+        margin-top: -40px;
+        padding: 24px 32px;
+    }
+
+    .cta-content p {
+        font-size: 14px;
+    }
+
+    .cta-btn {
+        font-size: 14px;
+        padding: 12px 28px;
+    }
+}
+
+/* =======================================================
+   RESPONSIVIDADE: DESKTOP 
+   ======================================================= */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    .sobre-cards {
+        gap: 24px;
+        max-width: 1100px;
+    }
+
+    .card {
+        padding: 32px 24px;
+        border-radius: 20px;
+    }
+
+    .card-title {
+        font-size: 28px;
+    }
+
+    .card-icon {
+        width: 48px;
+    }
+
+    .card p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* CTAs no Desktop */
+    .sobre-cta {
+        gap: 80px;
+        max-width: 1100px;
+        margin: 90px auto 0 auto;
+    }
+
+    .cta-card {
+        max-width: 1100px;
+        padding: 0 48px 28px 48px;
+    }
+
+    .gato-img {
+        left: -185px;
+        top: -340px;
+        width: 370px;
+    }
+
+    .cta-content {
+        max-width: 780px;
+        margin-top: -50px;
+        padding: 28px 40px;
+    }
+
+    .cta-content p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .cta-btn {
+        font-size: 15px;
+        padding: 12px 32px;
+    }
+}
