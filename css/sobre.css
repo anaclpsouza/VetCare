@@ -1,0 +1,155 @@
+/* =======================================================
+   PÁGINA SOBRE NÓS
+   ======================================================= */
+
+h1 {
+    color: var(--neutral-blue);
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 24px;
+}   
+
+/* Container dos Cards */
+.sobre-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    background-color: var(--neutral-white);
+    border-radius: 16px;
+    padding: 24px 20px;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: var(--peso-negrito);
+    margin: 0;
+}
+
+.card-icon {
+    width: 42px;
+    height: auto;
+}
+
+.card p {
+    font-size: 13px;
+    font-weight: var(--peso-negrito);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =======================================================
+   CORES DOS CARDS 
+   ======================================================= */
+
+.card-historia .card-title {
+    color: var(--accents);
+}
+
+.card-historia p {
+    color: var(--accents-blue);
+}
+
+.card-missao .card-title {
+    color: var(--neutral-blue);
+}
+
+.card-missao p {
+    color: var(--accents);
+}
+
+.card-valores .card-title {
+    color: var(--neutral-blue);
+}
+
+.card-valores p {
+    color: var(--secondary);
+}
+
+/* =======================================================
+    TABLETS 
+   ======================================================= */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 36px;
+        margin-bottom: 32px;
+    }
+
+    .sobre-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        align-items: stretch;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .card {
+        max-width: none;
+        padding: 24px 16px;
+    }
+
+    .card-title {
+        font-size: 24px;
+    }
+
+    .card-icon {
+        width: 44px;
+    }
+
+    .card p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+}
+
+/* =======================================================
+    DESKTOP 
+   ======================================================= */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    .sobre-cards {
+        gap: 24px;
+        max-width: 1100px;
+    }
+
+    .card {
+        padding: 32px 24px;
+        border-radius: 20px;
+    }
+
+    .card-title {
+        font-size: 28px;
+    }
+
+    .card-icon {
+        width: 48px;
+    }
+
+    .card p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
