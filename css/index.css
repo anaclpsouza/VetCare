@@ -86,13 +86,6 @@
     transform: scale(1.05);
 }
 
-.linha-com-botao {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 20px 0;
-}
-
 /* =======================================================
    INFRAESTRUTURA 
    ======================================================= */
@@ -265,29 +258,6 @@
     .card-depoimento {
         flex: 0 0 55%;
         max-width: 420px;
-    }
-
-    .linha-com-botao {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        margin: 30px 0;
-    }
-
-    .linha-com-botao::before,
-    .linha-com-botao::after {
-        content: "";
-        flex: 1;
-        border-bottom: 2px solid var(--neutral-blue);
-    }
-
-    .linha-com-botao::before {
-        margin-right: 20px;
-    }
-
-    .linha-com-botao::after {
-        margin-left: 20px;
     }
 }
 
