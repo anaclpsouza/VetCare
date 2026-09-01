@@ -40,6 +40,59 @@
     line-height: 1.5;
 }
 
+/* =======================================================
+   SERVIÇOS 
+   ======================================================= */
+
+.servicos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.cards-servicos {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    padding: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.cards-servicos::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 24px 16px;
+    border-radius: 16px;
+    flex: 0 0 160px;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card-img {
+    width: 60px;
+    height: 60px;
+}
+
+.card p {
+    font-size: 14px;
+    font-weight: var(--peso-negrito);
+    max-width: 140px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+
 /* =========================================
    TABLETS 
    ========================================= */
@@ -86,5 +139,24 @@
     .hero p,
     .hero h1 {
         max-width: 700px;
+    }
+
+    .card {
+        flex: 0 0 260px;
+    }
+
+    .cards-servicos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    .card-img {
+        width: 140px;
+        height: 140px;
     }
 }
