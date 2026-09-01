@@ -92,6 +92,36 @@
     transform: scale(1.05);
 }
 
+/* =======================================================
+   INFRAESTRUTURA 
+   ======================================================= */
+
+.infraestrutura {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0;
+}
+
+#card-infra {
+    flex: 1 0 160px;
+    background-color: var(--accents-blue);
+}
+
+#card-infra p {
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+.infra-content {
+    width: 100%;
+}
+
+.infra-title,
+.infra-content {
+    color: var(--neutral-white);
+}
 
 /* =========================================
    TABLETS 
@@ -111,6 +141,19 @@
 
     .hero p {
         max-width: 500px;
+    }
+
+    .infraestrutura {
+        margin: 48px 0;
+    }
+
+    #card-infra p {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .infra-title {
+        font-size: 32px;
     }
 }
 
@@ -189,5 +232,15 @@
 
     .linha-com-botao::after {
         margin-left: 20px;
+    }
+
+    .infraestrutura {
+        margin: 48px 0;
+    }
+
+    #card-infra p {
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 16px;
     }
 }
