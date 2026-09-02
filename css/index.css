@@ -251,10 +251,6 @@
         margin: 0 auto;
     }
 
-    .infra-title {
-        font-size: 32px;
-    }
-
     .card-depoimento {
         flex: 0 0 55%;
         max-width: 420px;
@@ -341,7 +337,6 @@
     #card-infra p {
         max-width: 700px;
         margin: 0 auto;
-        font-size: 16px;
     }
 
     .depoimentos-wrapper {

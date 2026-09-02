@@ -254,7 +254,7 @@ footer {
 }
 
 .redes-footer p {
-    font-size: 11px;
+    font-size: 10px;
     margin: 0;
     display: flex;
     align-items: center;
@@ -290,7 +290,7 @@ footer {
 
 .navegacao-footer li a {
     text-decoration: none;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 1.3;
     color: var(--neutral-blue);
     transition: opacity 0.2s ease;
@@ -321,7 +321,7 @@ footer {
 }
 
 .sac-footer li {
-    font-size: 11px;
+    font-size: 10px;
     color: var(--neutral-blue);
     display: flex;
     align-items: flex-start;
@@ -330,7 +330,7 @@ footer {
 }
 
 .sac-footer li i {
-    font-size: 11px;
+    font-size: 10px;
     margin-top: 2px;
     color: var(--accents);
 }
@@ -348,11 +348,11 @@ footer {
     }
 
     h1 {
-        font-size: 48px;
+        font-size: 36px;
     }
 
     h2 {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .menu-icon,
@@ -461,6 +461,10 @@ footer {
 
     h2 {
         font-size: 32px;
+    }
+
+    h3 {
+        font-size: 24px;
     }
 
     p {
