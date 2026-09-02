@@ -22,6 +22,10 @@
     --peso-negrito: 700;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
@@ -43,6 +47,14 @@ h3 {
 
 h1 {
     font-size: 32px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
 }
 
 .subtitulo {
@@ -109,6 +121,7 @@ main {
     padding: 10px;
     position: relative;
     z-index: 10;
+    text-decoration: none;
 }
 
 .logo {
@@ -169,7 +182,9 @@ main {
     border-radius: 0 0 8px 8px;
 }
 
-.menu-checkbox:checked~.menu {
+/* Abrir Menu (suporta :target e checkbox) */
+.menu-checkbox:checked~.menu,
+#menu:target {
     display: block;
 }
 
@@ -184,7 +199,8 @@ main {
     z-index: 5;
 }
 
-.menu-checkbox:checked~.overlay {
+.menu-checkbox:checked~.overlay,
+body:has(#menu:target) .overlay {
     display: block;
 }
 
