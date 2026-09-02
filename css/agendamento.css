@@ -1,0 +1,256 @@
+/* =======================================================
+   PÁGINA DE AGENDAMENTO / PERFIL DO VETERINÁRIO
+   ======================================================= */
+
+.agendamento-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 24px 16px 40px 16px;
+}
+
+/* -------------------------------------------------------
+   TÍTULO DINÂMICO (Nome do Veterinário)
+   Oculta todos por padrão e mostra apenas o ativo via :target / :has
+   ------------------------------------------------------- */
+.vet-titulo {
+    display: none;
+    color: var(--neutral-blue);
+    text-align: center;
+    font-weight: var(--peso-negrito);
+    margin: 0 0 20px 0;
+}
+
+
+body:has(#dra-camila:target) #nome-dra-camila,
+body:has(#dr-rodrigo:target) #nome-dr-rodrigo,
+body:has(#dra-beatriz:target) #nome-dra-beatriz,
+body:has(#dr-thiago:target) #nome-dr-thiago,
+body:has(#dra-mariana:target) #nome-dra-mariana {
+    display: block;
+}
+
+/* Fallback */
+body:not(:has(.vet-perfil:target)) #nome-dra-camila {
+    display: block;
+}
+
+/* -------------------------------------------------------
+   CARD PRINCIPAL UNIFICADO
+   ------------------------------------------------------- */
+.agendamento-card {
+    background-color: #F0F2F3;
+    border-radius: 20px;
+    padding: 24px 20px;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 10px 25px rgba(27, 58, 72, 0.12), 0 4px 10px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+}
+
+/* -------------------------------------------------------
+   BIO DO VETERINÁRIO (Alternada por :target)
+   ------------------------------------------------------- */
+.vet-perfil {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.vet-perfil:target {
+    display: flex;
+}
+
+/* Fallback */
+body:not(:has(.vet-perfil:target)) #dra-camila {
+    display: flex;
+}
+
+.vet-foto {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.vet-especialidade {
+    font-weight: var(--peso-negrito);
+    color: var(--neutral-blue);
+    margin: 0 0 12px 0;
+}
+
+.vet-descricao {
+    line-height: 1.55;
+    color: var(--neutral-blue);
+    margin: 0 0 24px 0;
+    text-align: center;
+}
+
+/* -------------------------------------------------------
+   FORMULÁRIO DE AGENDAMENTO 
+   ------------------------------------------------------- */
+.secao-formulario {
+    width: 100%;
+}
+
+.form-titulo {
+    font-weight: var(--peso-negrito);
+    color: var(--accents);
+    margin: 0 0 16px 0;
+    text-align: left;
+}
+
+.form-agendamento {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.form-grupo label {
+    font-size: 13px;
+    font-weight: var(--peso-normal);
+    color: var(--neutral-blue);
+}
+
+.form-campo {
+    background-color: #8E9FA6;
+    border: none;
+    border-radius: 6px;
+    height: 36px;
+    padding: 0 10px;
+    font-family: var(--fonte);
+    font-size: 13px;
+    color: #FFFFFF;
+    outline: none;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.form-campo:focus {
+    background-color: #788B93;
+    box-shadow: 0 0 0 2px var(--accents-blue);
+}
+
+.form-linha {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+}
+
+.select-container {
+    position: relative;
+    width: 100%;
+}
+
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+    padding-right: 28px;
+}
+
+.select-container::after {
+    content: "▼";
+    font-size: 10px;
+    color: #FFFFFF;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.form-textarea {
+    height: auto;
+    min-height: 90px;
+    padding: 10px;
+    resize: vertical;
+}
+
+/* Botão Enviar */
+.btn-enviar {
+    background-color: var(--primary);
+    color: var(--neutral-blue);
+    font-family: var(--fonte);
+    font-weight: var(--peso-negrito);
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 32px;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 8px;
+    min-width: 160px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-enviar:hover {
+    background-color: var(--accents);
+    color: var(--neutral-white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* =======================================================
+   RESPONSIVIDADE: TABLETS 
+   ======================================================= */
+@media (min-width: 768px) {
+    .vet-titulo {
+        margin-bottom: 28px;
+    }
+
+    .agendamento-card {
+        max-width: 540px;
+        padding: 32px 36px;
+        border-radius: 24px;
+    }
+
+    .vet-foto {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .vet-descricao {
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+}
+
+/* =======================================================
+   RESPONSIVIDADE: DESKTOP 
+   ======================================================= */
+@media (min-width: 1024px) {
+    .vet-titulo {
+        margin-bottom: 32px;
+    }
+
+    .agendamento-card {
+        max-width: 580px;
+        padding: 40px 48px;
+    }
+
+    .vet-foto {
+        width: 160px;
+        height: 160px;
+    }
+
+    .btn-enviar {
+        min-width: 200px;
+        padding: 12px 40px;
+    }
+}
