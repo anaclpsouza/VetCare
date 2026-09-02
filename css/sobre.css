@@ -5,7 +5,6 @@
 h1 {
     color: var(--neutral-blue);
     text-align: center;
-    font-size: 28px;
     margin-bottom: 24px;
 }   
 
@@ -257,7 +256,7 @@ h1 {
    ======================================================= */
 @media (min-width: 1024px) {
     h1 {
-        font-size: 40px;
+        font-size: 48px;
         margin-bottom: 40px;
     }
 
@@ -272,7 +271,7 @@ h1 {
     }
 
     .card-title {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     .card-icon {
