@@ -14,21 +14,19 @@
     <header>
         <nav class="navbar">
             <div class="logo-container">
-                <img src="./assets/img/logo.svg" alt="Logo VetCare" class="logo">
+                <img src="./assets/img/logo.svg" alt="Logo VetCare" class="logo" >
                 <h1 id="texto-logo">VetCare</h1>
             </div>
 
-            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-
-            <label for="menu-toggle" class="overlay"></label>
-
-            <label for="menu-toggle" class="menu-icon">
+            <a href="#menu" class="menu-icon" aria-label="Abrir Menu">
                 <span class="hamburguer-linha"></span>
-            </label>
+            </a>
 
-            <ul class="menu">
+            <a href="#" class="overlay" aria-label="Fechar Menu"></a>
+
+            <ul class="menu" id="menu">
                 <li><a href="pages/sobre.html">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
+                <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
         </nav>
@@ -46,7 +44,7 @@
             </div>
         </section>
 
-        <section class="servicos">
+        <section class="servicos" id="servicos">
             <h2>Conheça nossos serviços</h2>
             <section class="cards-servicos">
                 <article class="card" style="background-color: var(--secondary);">
@@ -70,7 +68,7 @@
                 </article>
             </section>
             <div class="linha-com-botao">
-                <a href="#" class="button button-default button-servicos">VER TODOS OS
+                <a href="/pages/servicos.html" class="button button-default button-servicos">VER TODOS OS
                     SERVIÇOS</a>
             </div>
         </section>
@@ -202,7 +200,7 @@
             <h3 class="footer-title">Navegação</h3>
             <ul class="navegacao-footer">
                 <li><a href="#">Nossa Estrutura</a></li>
-                <li><a href="#">Todos os Serviços</a></li>
+                <li><a href="pages/servicos.html">Todos os Serviços</a></li>
                 <li><a href="#">Corpo Clínico (Veterinários)</a></li>
                 <li><a href="#">Agendar Consulta</a></li>
             </ul>
