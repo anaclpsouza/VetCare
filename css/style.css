@@ -124,6 +124,10 @@ main {
     position: relative;
 }
 
+.logo-container {
+    text-decoration: none;
+}
+
 .menu-checkbox,
 #texto-logo {
     display: none;
@@ -379,6 +383,7 @@ footer {
         display: flex;
         font-weight: var(--peso-negrito);
         color: var(--neutral-blue);
+        font-size: 48px;
     }
 
     .menu {
