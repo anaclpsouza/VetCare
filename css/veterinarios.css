@@ -1,0 +1,174 @@
+/* =======================================================
+   PÁGINA VETERINÁRIOS (CORPO CLÍNICO)
+   ======================================================= */
+
+.titulo-pagina {
+    color: var(--neutral-blue);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* =======================================================
+   SEÇÃO DE FILTRO
+   ======================================================= */
+.filtro-secao {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 20px auto;
+}
+
+.btn-filtro {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #8E9FA6;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-family: var(--fonte);
+    font-size: 12px;
+    font-weight: var(--peso-negrito);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-filtro i {
+    font-size: 11px;
+}
+
+.btn-filtro:hover {
+    background-color: var(--neutral-blue);
+}
+
+/* =======================================================
+   CARDS DOS VETERINÁRIOS
+   ======================================================= */
+.veterinarios-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.card-veterinario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--secondary);
+    border-radius: 16px;
+    padding: 24px 20px 20px 20px;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0 10px 25px rgba(109, 181, 216, 0.25), 0 4px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.card-veterinario:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(109, 181, 216, 0.35), 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.card-foto {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    display: block;
+}
+
+.card-nome {
+    font-size: 20px;
+    font-weight: var(--peso-negrito);
+    color: var(--neutral-blue);
+    margin: 0 0 6px 0;
+}
+
+.card-especialidade {
+    font-size: 13px;
+    color: var(--neutral-white);
+    font-weight: var(--peso-normal);
+    margin: 0 0 20px 0;
+    min-height: 18px;
+}
+
+.card-veterinario .btn-agendar {
+    width: 140px;
+    padding: 8px 16px;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    border-radius: 8px;
+    background-color: var(--neutral-white);
+    color: var(--neutral-blue);
+    font-weight: var(--peso-negrito);
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card-veterinario .btn-agendar:hover {
+    background-color: var(--neutral-blue);
+    color: var(--neutral-white);
+}
+
+/* =======================================================
+   RESPONSIVIDADE: TABLETS 
+   ======================================================= */
+@media (min-width: 768px) {
+    .titulo-pagina {
+        font-size: 48px;
+        margin-bottom: 28px;
+    }
+
+    .filtro-secao {
+        max-width: 700px;
+        margin-bottom: 28px;
+    }
+
+    .card-veterinario {
+        max-width: none;
+    }
+}
+
+/* =======================================================
+   RESPONSIVIDADE: DESKTOP 
+   ======================================================= */
+@media (min-width: 1024px) {
+    .titulo-pagina {
+        font-size: 48px;
+        margin-bottom: 36px;
+    }
+
+    .filtro-secao {
+        max-width: 1020px;
+        margin-bottom: 32px;
+    }
+
+    .veterinarios-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        max-width: 1020px;
+        margin: 0 auto;
+    }
+
+    .card-foto {
+        width: 104px;
+        height: 104px;
+    }
+
+    .card-nome {
+        font-size: 22px;
+    }
+
+    .card-especialidade {
+        font-size: 14px;
+    }
+}

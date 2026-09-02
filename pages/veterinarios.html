@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/servicos.css">
+    <link rel="stylesheet" href="../css/veterinarios.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <title>Serviços</title>
+    <title>Corpo Clínico — Veterinários | VetCare</title>
 </head>
 
 <body>
@@ -33,51 +33,51 @@
             </ul>
         </nav>
     </header>
+
     <main>
-        <section class="servicos">
-            <h1 id="titulo-servicos">Serviços Oferecidos</h1>
+        <h1 class="titulo-pagina">Conheça nossos profissionais</h1>
 
-            <article>
-                <h2>Consultas Clínicas</h2>
-                <div class="conteudo-servico">
-                    <p>Atendimento de rotina, pediátrico e geriátrico. Avaliação física completa e orientações
-                        preventivas para garantir a qualidade de vida do seu pet em todas as fases.</p>
-                    <a href="/pages/veterinarios.html" class="button button-default">VER VETERINÁRIOS</a>
-                </div>
+        <section class="filtro-secao">
+            <button class="btn-filtro" type="button">
+                <i class="fa-solid fa-filter"></i>
+                <span>Filtrar por especialidade</span>
+            </button>
+        </section>
+
+        <section class="veterinarios-cards" id="lista-veterinarios">
+            <article class="card-veterinario">
+                <img src="../assets/img/img-draCamila.svg" alt="Foto da Dra. Camila Lemos" class="card-foto">
+                <h2 class="card-nome">Dra. Camila Lemos</h2>
+                <p class="card-especialidade">Especialista em Medicina Felina</p>
+                <a href="#" class="button button-default btn-agendar">AGENDAR</a>
             </article>
 
-            <article>
-                <h2>Exames Diagnósticos</h2>
-                <div class="conteudo-servico">
-                    <p>Laboratório clínico integrado, ultrassonografia e raio-X digital. Resultados ágeis e precisos sem
-                        a necessidade de deslocar o animal para outros centros.</p>
-                    <a href="/pages/veterinarios.html" class="button button-default">VER VETERINÁRIOS</a>
-                </div>
+            <article class="card-veterinario">
+                <img src="../assets/img/img-drRodrigo.svg" alt="Foto do Dr. Rodrigo Fontes" class="card-foto">
+                <h2 class="card-nome">Dr. Rodrigo Fontes</h2>
+                <p class="card-especialidade">Cirurgia Geral e Ortopedia</p>
+                <a href="#" class="button button-default btn-agendar">AGENDAR</a>
             </article>
 
-            <article>
-                <h2>Centro Cirúrgico</h2>
-                <div class="conteudo-servico">
-                    <p>Procedimentos eletivos e de emergência com anestesia inalatória e monitoramento multiparamétrico
-                        contínuo, focando na segurança absoluta e recuperação sem dor.</p>
-                    <a href="/pages/veterinarios.html" class="button button-default">VER VETERINÁRIOS</a>
-                </div>
+            <article class="card-veterinario">
+                <img src="../assets/img/img-draBeatriz.svg" alt="Foto da Dra. Beatriz Nogueira" class="card-foto">
+                <h2 class="card-nome">Dra. Beatriz Nogueira</h2>
+                <p class="card-especialidade">Odontologia Veterinária</p>
+                <a href="#" class="button button-default btn-agendar">AGENDAR</a>
             </article>
 
-            <article>
-                <h2>Odontologia Veterinária</h2>
-                <div class="conteudo-servico">
-                    <p>Tratamento periodontal, profilaxia (limpeza de tártaro) e avaliações completas. Cuidamos da saúde bucal para prevenir infecções sistêmicas e dores crônicas.</p>
-                    <a href="/pages/veterinarios.html" class="button button-default">VER VETERINÁRIOS</a>
-                </div>
+            <article class="card-veterinario">
+                <img src="../assets/img/img-drThiago.svg" alt="Foto do Dr. Thiago Mendes" class="card-foto">
+                <h2 class="card-nome">Dr. Thiago Mendes</h2>
+                <p class="card-especialidade">Dermatologia e Alergologia</p>
+                <a href="#" class="button button-default btn-agendar">AGENDAR</a>
             </article>
 
-            <article>
-                <h2>Imunização e Microchipagem</h2>
-                <div class="conteudo-servico">
-                    <p>Protocolos vacinais individualizados com imunizantes importados de alta eficácia e implantação de microchip para identificação e segurança do animal.</p>
-                    <a href="/pages/veterinarios.html" class="button button-default">VER VETERINÁRIOS</a>
-                </div>
+            <article class="card-veterinario">
+                <img src="../assets/img/img-draMariana.svg" alt="Foto da Dra. Mariana Costa" class="card-foto">
+                <h2 class="card-nome">Dra. Mariana Costa</h2>
+                <p class="card-especialidade">Cardiologia e Cuidados Geriátricos</p>
+                <a href="#" class="button button-default btn-agendar">AGENDAR</a>
             </article>
         </section>
     </main>
