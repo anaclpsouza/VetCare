@@ -200,12 +200,6 @@ body:not(:has(.carrossel-slide:target)) #slide-1 {
         justify-content: center;
         gap: 20px;
     }
-
-    .btn-voltar-home,
-    .btn-contate-clinica {
-        width: auto;
-        min-width: 240px;
-    }
 }
 
 /* =======================================================
