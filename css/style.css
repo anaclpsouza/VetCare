@@ -101,6 +101,16 @@ main {
     color: var(--neutral-white);
 }
 
+.button-secondary {
+    color: var(--neutral-white);
+    background-color: var(--secondary);
+}
+
+.button-secondary:hover {
+    background-color: var(--neutral-blue);
+    color: var(--neutral-white);
+}
+
 .button-accents {
     background-color: var(--accents);
     color: var(--neutral-white);
