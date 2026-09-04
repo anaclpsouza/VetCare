@@ -38,6 +38,7 @@ h1 {
 }
 
 .card-title {
+    color: var(--neutral-blue);
     margin: 0;
 }
 
@@ -51,34 +52,23 @@ h1 {
     font-weight: var(--peso-negrito);
     line-height: 1.6;
     margin: 0;
+    color: var(--neutral-blue);
 }
 
 /* =======================================================
    CORES DOS CARDS 
    ======================================================= */
 
-.card-historia .card-title {
-    color: var(--accents);
-}
-
-.card-historia p {
-    color: var(--accents-blue);
-}
-
-.card-missao .card-title {
-    color: var(--neutral-blue);
-}
-
-.card-missao p {
-    color: var(--accents);
-}
-
+.card-historia .card-title,
+.card-missao .card-title,
 .card-valores .card-title {
     color: var(--neutral-blue);
 }
 
+.card-historia p,
+.card-missao p,
 .card-valores p {
-    color: var(--accents-blue);
+    color: var(--neutral-blue);
 }
 
 /* =======================================================
