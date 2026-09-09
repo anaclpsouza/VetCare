@@ -216,6 +216,12 @@ main {
     background-color: var(--neutral-white);
     text-decoration: none;
     font-weight: var(--peso-negrito);
+    transition: all 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: var(--neutral-blue);
+    color: var(--neutral-white);
 }
 
 .menu li:last-child a {
@@ -446,8 +452,9 @@ footer {
     }
 
     .menu li a:hover {
-        border: 1px solid var(--neutral-blue);
+        background-color: var(--neutral-blue);
         color: var(--neutral-white);
+        border: 1px solid var(--neutral-blue);
     }
 
     .menu li:last-child a {
@@ -537,6 +544,15 @@ footer {
 
     .menu li a {
         padding: 10px 20px;
+        font-weight: var(--peso-negrito);
+    }
+
+    .menu li a.active,
+    .menu li a[aria-current="page"] {
+        background-color: var(--neutral-blue);
+        color: var(--neutral-white);
+        font-weight: var(--peso-negrito);
+        border: 1px solid var(--neutral-blue);
     }
 
     footer {
