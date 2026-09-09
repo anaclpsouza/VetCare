@@ -47,11 +47,13 @@
 
 .cards-servicos {
     display: flex;
-    gap: 8px;
+    gap: 10px;
     width: 100%;
-    padding: 20px;
+    padding: 16px 2px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 .cards-servicos::-webkit-scrollbar {
@@ -63,27 +65,36 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 16px;
     padding: 24px 16px;
     border-radius: 16px;
-    flex: 0 0 180px;
-    scroll-snap-align: center;
     transition: transform 0.3s ease;
 }
 
-.card-img {
-    width: 60px;
-    height: 60px;
+.cards-servicos .card {
+    flex: 0 0 calc((100% - 10px) / 2);
+    min-width: calc((100% - 10px) / 2);
+    max-width: calc((100% - 10px) / 2);
+    box-sizing: border-box;
+    padding: 20px 10px;
+    gap: 12px;
+    scroll-snap-align: start;
+    scroll-margin-top: 80px;
 }
 
-.card p {
-    font-size: 14px;
+.card-img {
+    width: 50px;
+    height: 50px;
+}
+
+.cards-servicos .card p {
+    font-size: 13px;
     font-weight: var(--peso-negrito);
-    max-width: 140px;
+    max-width: 100%;
+    line-height: 1.35;
 }
 
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* =======================================================
@@ -96,10 +107,15 @@
     align-items: center;
     justify-content: center;
     margin: 24px 0;
+    width: 100%;
 }
 
 #card-infra {
-    flex: 1 0 160px;
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    gap: 16px;
     background-color: var(--accents-blue);
 }
 
@@ -135,8 +151,10 @@
     gap: 16px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    scroll-padding: 0 20px;
-    padding: 20px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding: 0;
+    padding: 16px 0;
     width: 100%;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -149,9 +167,12 @@
 .card-depoimento {
     display: flex;
     flex-direction: column;
-    flex: 0 0 85%;
-    max-width: 360px;
-    scroll-snap-align: start;
+    flex: 0 0 100%;
+    min-width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    scroll-snap-align: center;
+    scroll-margin-top: 80px;
 }
 
 /* formato do balão */
@@ -218,6 +239,73 @@
     margin-right: 40px;
 }
 
+/* =======================================================
+   INDICADORES DOS CARROSSEIS (MOBILE)
+   ======================================================= */
+
+.carrossel-indicadores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0 16px 0;
+}
+
+.indicador-ponto {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #CBD5E1;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* Indicador de Serviços: 2 slides */
+.dot-servico-1 {
+    width: 22px;
+    border-radius: 11px;
+    background-color: var(--neutral-blue);
+}
+
+body:has(#servico-slide-2:target) .dot-servico-1 {
+    width: 8px;
+    border-radius: 50%;
+    background-color: #CBD5E1;
+}
+
+body:has(#servico-slide-2:target) .dot-servico-2 {
+    width: 22px;
+    border-radius: 11px;
+    background-color: var(--neutral-blue);
+}
+
+/* Indicador de Depoimentos: 3 slides */
+.dot-depoimento-1 {
+    width: 22px;
+    border-radius: 11px;
+    background-color: var(--neutral-blue);
+}
+
+body:has(#depoimento-2:target) .dot-depoimento-1,
+body:has(#depoimento-3:target) .dot-depoimento-1 {
+    width: 8px;
+    border-radius: 50%;
+    background-color: #CBD5E1;
+}
+
+body:has(#depoimento-2:target) .dot-depoimento-2 {
+    width: 22px;
+    border-radius: 11px;
+    background-color: var(--neutral-blue);
+}
+
+body:has(#depoimento-3:target) .dot-depoimento-3 {
+    width: 22px;
+    border-radius: 11px;
+    background-color: var(--neutral-blue);
+}
+
 /* =========================================
    TABLETS 
    ========================================= */
@@ -239,7 +327,13 @@
     }
 
     .cards-servicos {
-        gap: 10px;
+        gap: 12px;
+    }
+
+    .card {
+        flex: 0 0 200px;
+        min-width: 0;
+        max-width: none;
     }
 
     .infraestrutura {
@@ -253,6 +347,7 @@
 
     .card-depoimento {
         flex: 0 0 55%;
+        min-width: 0;
         max-width: 420px;
     }
 }
@@ -284,18 +379,28 @@
         max-width: 700px;
     }
 
-    .card {
-        flex: 0 0 260px;
-    }
-
     .cards-servicos {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 16px;
+        width: 100%;
+        padding: 20px 0;
+        overflow-x: visible;
     }
 
-    .card p {
+    .cards-servicos .card {
+        flex: none;
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        padding: 24px 16px;
+        gap: 16px;
+        scroll-snap-align: none;
+    }
+
+    .cards-servicos .card p {
         font-size: 16px;
+        max-width: 160px;
     }
 
     .card-img {
@@ -351,6 +456,11 @@
     .card-depoimento {
         flex: none;
         max-width: 100%;
+        min-width: 0;
+    }
+
+    .carrossel-indicadores {
+        display: none;
     }
 
     .texto-depoimento,
