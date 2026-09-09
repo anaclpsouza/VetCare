@@ -48,7 +48,7 @@
         <section class="servicos" id="servicos">
             <h2>Conheça nossos serviços</h2>
             <div class="cards-servicos">
-                <article class="card" style="background-color: var(--secondary);">
+                <article class="card" id="servico-slide-1" style="background-color: var(--secondary);">
                     <img src="assets/img/servicos/card-img-1.svg" alt="Ilustração de estetoscópio - Consultas de rotina" class="card-img">
                     <p> Consultas de Rotina — Acompanhamento preventivo e atencioso para garantir uma vida longa e ativa
                         para o seu pet.</p>
@@ -58,7 +58,7 @@
                     <p> Vacinação em Dia — Proteção essencial com as melhores vacinas importadas para manter as doenças
                         bem longe.</p>
                 </article>
-                <article class="card" style="background-color: var(--primary);">
+                <article class="card" id="servico-slide-2" style="background-color: var(--primary);">
                     <img src="assets/img/servicos/card-img-3.svg" alt="Ilustração de microscópio - Exames rápidos" class="card-img">
                     <p> Exames Rápidos — Laboratório próprio e moderno para diagnósticos precisos e resultados sem
                         demora.</p>
@@ -67,6 +67,10 @@
                     <img src="assets/img/servicos/card-img-4.svg" alt="Ilustração de camaleão - Consulta para animais exóticos" class="card-img">
                     <p> Consulta para animais exóticos — aqui, todos os animais são bem-vindos e bem cuidados. </p>
                 </article>
+            </div>
+            <div class="carrossel-indicadores" aria-label="Navegação do carrossel de serviços">
+                <a href="#servico-slide-1" class="indicador-ponto dot-servico-1" aria-label="Ver serviços 1 e 2"></a>
+                <a href="#servico-slide-2" class="indicador-ponto dot-servico-2" aria-label="Ver serviços 3 e 4"></a>
             </div>
             <div class="linha-com-botao">
                 <a href="pages/servicos.html" class="button button-default button-servicos">VER TODOS OS
@@ -89,7 +93,7 @@
         <section class="depoimentos">
             <h2> Histórias de quem confia na VetCare</h2>
             <div class="depoimentos-wrapper">
-                <article class="card-depoimento">
+                <article class="card-depoimento" id="depoimento-1">
                     <blockquote class="balao-fala">
                         <div class="estrelas" aria-label="Avaliação de 5 estrelas">
                             <svg width="211" height="29" viewBox="117 112 211 29" fill="none"
@@ -121,7 +125,7 @@
                         <img src="assets/img/depoimentos/depoimento-1.svg" alt="Foto da gata Lua">
                     </figure>
                 </article>
-                <article class="card-depoimento">
+                <article class="card-depoimento" id="depoimento-2">
                     <blockquote class="balao-fala">
                         <div class="estrelas" aria-label="Avaliação de 5 estrelas">
                             <svg width="211" height="29" viewBox="117 112 211 29" fill="none"
@@ -153,7 +157,7 @@
                         <img src="assets/img/depoimentos/depoimento-2.svg" alt="Foto do cão Thor">
                     </figure>
                 </article>
-                <article class="card-depoimento">
+                <article class="card-depoimento" id="depoimento-3">
                     <blockquote class="balao-fala">
                         <div class="estrelas" aria-label="Avaliação de 5 estrelas">
                             <svg width="211" height="29" viewBox="117 112 211 29" fill="none"
@@ -185,6 +189,11 @@
                         <img src="assets/img/depoimentos/depoimento-3.svg" alt="Foto do cão Paçoca">
                     </figure>
                 </article>
+            </div>
+            <div class="carrossel-indicadores" aria-label="Navegação do carrossel de depoimentos">
+                <a href="#depoimento-1" class="indicador-ponto dot-depoimento-1" aria-label="Depoimento 1"></a>
+                <a href="#depoimento-2" class="indicador-ponto dot-depoimento-2" aria-label="Depoimento 2"></a>
+                <a href="#depoimento-3" class="indicador-ponto dot-depoimento-3" aria-label="Depoimento 3"></a>
             </div>
         </section>
     </main>
